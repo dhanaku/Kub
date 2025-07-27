@@ -1,9 +1,10 @@
-Create Resource Group
+# Create Resource Group
 resource "azurerm_resource_group" "rg" {
   name     = "aks-resource-group"
   location = "East US"
 }
-Create AKS Cluster
+
+# Create AKS Cluster
 resource "azurerm_kubernetes_cluster" "aks" {
   name                = "aks-cluster"
   location            = azurerm_resource_group.rg.location
